@@ -1,0 +1,80 @@
+{
+    "name": "cline/postal-code",
+    "description": "Validates and formats postal codes for all countries with a Laravel-first approach",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "laravel",
+        "postal-code",
+        "postcode",
+        "zip-code",
+        "validation",
+        "formatting"
+    ],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "brian@cline.sh"
+        }
+    ],
+    "require": {
+        "php": "^8.5.0",
+        "illuminate/contracts": "^12.0",
+        "illuminate/support": "*",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "cline/php-cs-fixer": "^1.0.4",
+        "driftingly/rector-laravel": "^2.0.7",
+        "ergebnis/composer-normalize": "^2.49@dev",
+        "laravel/pint": "^1.25.1",
+        "orchestra/testbench": "^10.6",
+        "pestphp/pest": "^4.0",
+        "pestphp/pest-plugin-laravel": "^4.0",
+        "pestphp/pest-plugin-type-coverage": "^4.0",
+        "phpstan/phpstan": "^2.1.30",
+        "rector/rector": "^2.2.1",
+        "symfony/var-dumper": "^7.3.4"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Cline\\PostalCode\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true,
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Cline\\PostalCode\\PostalCodeServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/php-cs-fixer fix",
+        "refactor": "rector",
+        "test": [
+            "@test:lint",
+            "@test:type-coverage",
+            "@test:unit",
+            "@test:types",
+            "@test:refactor"
+        ],
+        "test:lint": "vendor/bin/php-cs-fixer check --diff",
+        "test:refactor": "rector --dry-run",
+        "test:type-coverage": "pest --parallel --min=90 --type-coverage",
+        "test:types": "phpstan",
+        "test:unit": "pest --parallel --min=90 --coverage"
+    }
+}

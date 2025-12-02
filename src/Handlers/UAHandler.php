@@ -1,0 +1,82 @@
+<?php declare(strict_types=1);
+
+/**
+ * Copyright (C) Brian Faust
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Cline\PostalCode\Handlers;
+
+use Cline\PostalCode\Contracts\PostalCodeHandler;
+
+use function preg_match;
+
+/**
+ * Validates and formats postal codes for Ukraine.
+ *
+ * Ukraine uses a 5-digit numeric postal code system without separators,
+ * introduced in 1932 during the Soviet era. The postal code identifies
+ * specific delivery zones across Ukraine's oblasts and municipalities.
+ *
+ * @see https://en.wikipedia.org/wiki/List_of_postal_codes
+ * @see https://en.wikipedia.org/wiki/Postal_codes_in_Ukraine
+ *
+ * @author Brian Faust <brian@cline.sh>
+ */
+final class UAHandler implements PostalCodeHandler
+{
+    /**
+     * Validates whether the provided postal code matches Ukraine's format.
+     *
+     * @param  string $postalCode The postal code to validate
+     * @return bool   Returns true if the postal code is valid, false otherwise
+     */
+    public function validate(string $postalCode): bool
+    {
+        return $this->doFormat($postalCode) !== null;
+    }
+
+    /**
+     * Formats the postal code according to Ukraine's standard format.
+     *
+     * Ukraine postal codes require no formatting as they are already
+     * in their standard 5-digit form. Invalid codes are returned unchanged.
+     *
+     * @param  string $postalCode The postal code to format
+     * @return string The formatted postal code, or the original value if invalid
+     */
+    public function format(string $postalCode): string
+    {
+        return $this->doFormat($postalCode) ?? $postalCode;
+    }
+
+    /**
+     * Provides a human-readable description of the accepted postal code format.
+     *
+     * @return string Format hint for Ukraine postal codes
+     */
+    public function hint(): string
+    {
+        return 'PostalCodes consist of 5 digits, without separator.';
+    }
+
+    /**
+     * Performs the actual validation and formatting logic.
+     *
+     * Validates that the postal code consists of exactly 5 digits with no
+     * separators or other characters.
+     *
+     * @param  string      $postalCode The postal code to validate and format
+     * @return null|string The validated postal code if valid, null otherwise
+     */
+    private function doFormat(string $postalCode): ?string
+    {
+        if (preg_match('/^\d{5}$/', $postalCode) !== 1) {
+            return null;
+        }
+
+        return $postalCode;
+    }
+}
