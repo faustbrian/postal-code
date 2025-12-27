@@ -1,8 +1,3 @@
----
-title: Basic Usage
-description: Validating and formatting postal codes for different countries.
----
-
 Validating and formatting postal codes for different countries.
 
 ## Validation

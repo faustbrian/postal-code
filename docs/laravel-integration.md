@@ -1,8 +1,3 @@
----
-title: Laravel Integration
-description: Use Postal Code with Laravel applications.
----
-
 Use Postal Code with Laravel applications.
 
 ## Installation

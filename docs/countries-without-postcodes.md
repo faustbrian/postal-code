@@ -1,8 +1,3 @@
----
-title: Countries Without Postal Codes
-description: Handling countries that do not have postal code systems.
----
-
 Some countries do not have postal code systems. When shipping to these destinations or validating addresses, you may need to detect this and provide a fallback value.
 
 ## Checking Postal Code Support

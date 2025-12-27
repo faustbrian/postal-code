@@ -1,8 +1,3 @@
----
-title: Getting Started
-description: Install and start using Postal Code for validating postal codes in PHP.
----
-
 Postal Code is a PHP library for validating postal/ZIP codes for countries worldwide.
 
 ## Installation

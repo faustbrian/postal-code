@@ -1,8 +1,3 @@
----
-title: Exception Handling
-description: Handle postal code validation errors gracefully.
----
-
 Handle postal code validation errors gracefully.
 
 ## Validation Exceptions

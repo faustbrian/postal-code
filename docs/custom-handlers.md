@@ -1,8 +1,3 @@
----
-title: Custom Handlers
-description: Create custom postal code validators for specific needs.
----
-
 Create custom postal code validators for specific needs.
 
 ## Creating a Custom Handler
