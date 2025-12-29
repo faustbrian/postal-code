@@ -48,15 +48,15 @@ If you discover any security related issues, please use the [GitHub security rep
 
 The MIT License. Please see [License File](LICENSE.md) for more information.
 
-[ico-tests]: https://github.com/faustbrian/postal-code/actions/workflows/quality-assurance.yaml/badge.svg
+[ico-tests]: https://git.cline.sh/faustbrian/postal-code/actions/workflows/quality-assurance.yaml/badge.svg
 [ico-version]: https://img.shields.io/packagist/v/cline/postal-code.svg
 [ico-license]: https://img.shields.io/badge/License-MIT-green.svg
 [ico-downloads]: https://img.shields.io/packagist/dt/cline/postal-code.svg
 
-[link-tests]: https://github.com/faustbrian/postal-code/actions
+[link-tests]: https://git.cline.sh/faustbrian/postal-code/actions
 [link-packagist]: https://packagist.org/packages/cline/postal-code
 [link-downloads]: https://packagist.org/packages/cline/postal-code
-[link-security]: https://github.com/faustbrian/postal-code/security
-[link-maintainer]: https://github.com/faustbrian
+[link-security]: https://git.cline.sh/faustbrian/postal-code/security
+[link-maintainer]: https://git.cline.sh/faustbrian
 [link-author]: https://github.com/brick/postcode
 [link-contributors]: ../../contributors
