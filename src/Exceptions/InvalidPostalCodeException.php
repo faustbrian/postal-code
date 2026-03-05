@@ -11,6 +11,9 @@ namespace Cline\PostalCode\Exceptions;
 
 use Cline\PostalCode\Contracts\PostalCodeException;
 use Exception;
+use Facade\IgnitionContracts\BaseSolution;
+use Facade\IgnitionContracts\ProvidesSolution;
+use Facade\IgnitionContracts\Solution;
 
 /**
  * Exception thrown when a postal code fails validation for a specific country.
@@ -22,7 +25,7 @@ use Exception;
  *
  * @author Brian Faust <brian@cline.sh>
  */
-final class InvalidPostalCodeException extends Exception implements PostalCodeException
+final class InvalidPostalCodeException extends Exception implements PostalCodeException, ProvidesSolution
 {
     /**
      * Create a new invalid postal code exception.
@@ -96,5 +99,17 @@ final class InvalidPostalCodeException extends Exception implements PostalCodeEx
     public function getHint(): ?string
     {
         return $this->hint;
+    }
+
+    public function getSolution(): Solution
+    {
+        /** @var BaseSolution $solution */
+        $solution = BaseSolution::create('Review package usage and configuration.');
+
+        return $solution
+            ->setSolutionDescription('Exception: '.$this->getMessage())
+            ->setDocumentationLinks([
+                'Package documentation' => 'https://github.com/cline/postal-code',
+            ]);
     }
 }
