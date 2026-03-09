@@ -1,15 +1,17 @@
 ## Table of Contents
 
-1. Basic Usage (`cookbooks/basic-usage.md`)
-2. Custom Handlers (`cookbooks/custom-handlers.md`)
-3. Exception Handling (`cookbooks/exception-handling.md`)
-4. Laravel Integration (`cookbooks/laravel-integration.md`)
-5. Overview (`docs/README.md`)
-6. Basic Usage (`docs/basic-usage.md`)
-7. Countries Without Postcodes (`docs/countries-without-postcodes.md`)
-8. Custom Handlers (`docs/custom-handlers.md`)
-9. Exception Handling (`docs/exception-handling.md`)
-10. Laravel Integration (`docs/laravel-integration.md`)
+1. [Basic Usage](#doc-cookbooks-basic-usage) (`cookbooks/basic-usage.md`)
+2. [Custom Handlers](#doc-cookbooks-custom-handlers) (`cookbooks/custom-handlers.md`)
+3. [Exception Handling](#doc-cookbooks-exception-handling) (`cookbooks/exception-handling.md`)
+4. [Laravel Integration](#doc-cookbooks-laravel-integration) (`cookbooks/laravel-integration.md`)
+5. [Overview](#doc-docs-readme) (`docs/README.md`)
+6. [Basic Usage](#doc-docs-basic-usage) (`docs/basic-usage.md`)
+7. [Countries Without Postcodes](#doc-docs-countries-without-postcodes) (`docs/countries-without-postcodes.md`)
+8. [Custom Handlers](#doc-docs-custom-handlers) (`docs/custom-handlers.md`)
+9. [Exception Handling](#doc-docs-exception-handling) (`docs/exception-handling.md`)
+10. [Laravel Integration](#doc-docs-laravel-integration) (`docs/laravel-integration.md`)
+<a id="doc-cookbooks-basic-usage"></a>
+
 # Basic Usage Cookbook
 
 This cookbook covers the essential operations for validating and formatting postal codes.
@@ -193,6 +195,8 @@ foreach ($countries as $country) {
     }
 }
 ```
+
+<a id="doc-cookbooks-custom-handlers"></a>
 
 # Custom Handlers Cookbook
 
@@ -390,6 +394,8 @@ When resolving a handler for a country:
 - **Stateless handlers**: Handlers are instantiated without constructor arguments
 - **Handler caching**: Handlers are cached after first use. Use `registerHandler()` to replace cached handlers
 - **Country codes**: Use ISO 3166-1 alpha-2 codes (2 uppercase letters)
+
+<a id="doc-cookbooks-exception-handling"></a>
 
 # Exception Handling Cookbook
 
@@ -620,6 +626,8 @@ echo "Errors: " . count($errors);
 |--------|---------|-------------|
 | `getMessage()` | `string` | "Unknown country: XX" |
 | `getCountry()` | `string` | The unsupported country code |
+
+<a id="doc-cookbooks-laravel-integration"></a>
 
 # Laravel Integration Cookbook
 
@@ -964,6 +972,8 @@ test('fluent interface works', function () {
 - The manager is resolved from the container with config injection
 - Custom handlers from config are loaded automatically
 
+<a id="doc-docs-readme"></a>
+
 Postal Code is a PHP library for validating postal/ZIP codes for countries worldwide.
 
 ## Installation
@@ -1032,10 +1042,12 @@ $result->input(); // "sw1a1aa"
 
 ## Next Steps
 
-- [Basic Usage](./basic-usage.md) - Validation patterns
-- [Custom Handlers](./custom-handlers.md) - Add custom validators
-- [Exception Handling](./exception-handling.md) - Handle validation errors
-- [Laravel Integration](./laravel-integration.md) - Use with Laravel
+- [Basic Usage](#doc-docs-basic-usage) - Validation patterns
+- [Custom Handlers](#doc-docs-custom-handlers) - Add custom validators
+- [Exception Handling](#doc-docs-exception-handling) - Handle validation errors
+- [Laravel Integration](#doc-docs-laravel-integration) - Use with Laravel
+
+<a id="doc-docs-basic-usage"></a>
 
 Validating and formatting postal codes for different countries.
 
@@ -1174,6 +1186,8 @@ $results = array_map(
     $postalCodes
 );
 ```
+
+<a id="doc-docs-countries-without-postcodes"></a>
 
 Some countries do not have postal code systems. When shipping to these destinations or validating addresses, you may need to detect this and provide a fallback value.
 
@@ -1317,6 +1331,8 @@ $countries = Country::countriesWithoutPostalCodes();
 | VU | Vanuatu |
 | YE | Yemen |
 | ZW | Zimbabwe |
+
+<a id="doc-docs-custom-handlers"></a>
 
 Create custom postal code validators for specific needs.
 
@@ -1493,6 +1509,8 @@ class PostalCodeHandlerFactory
 }
 ```
 
+<a id="doc-docs-exception-handling"></a>
+
 Handle postal code validation errors gracefully.
 
 ## Validation Exceptions
@@ -1654,6 +1672,8 @@ Cline\PostalCode\Exceptions\PostalCodeException
 ├── UnsupportedCountryException // Country not supported
 └── HandlerException            // Handler error
 ```
+
+<a id="doc-docs-laravel-integration"></a>
 
 Use Postal Code with Laravel applications.
 

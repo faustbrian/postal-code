@@ -21,10 +21,10 @@ composer require cline/postal-code
 
 ## Documentation
 
-- **[Basic Usage](cookbooks/basic-usage.md)** - Validation, formatting, and the fluent API
-- **[Custom Handlers](cookbooks/custom-handlers.md)** - Creating and registering country handlers
-- **[Exception Handling](cookbooks/exception-handling.md)** - Handling validation errors gracefully
-- **[Laravel Integration](cookbooks/laravel-integration.md)** - Validation rules, casts, Blade, and Livewire
+- **[Basic Usage](DOCS.md#doc-cookbooks-basic-usage)** - Validation, formatting, and the fluent API
+- **[Custom Handlers](DOCS.md#doc-cookbooks-custom-handlers)** - Creating and registering country handlers
+- **[Exception Handling](DOCS.md#doc-cookbooks-exception-handling)** - Handling validation errors gracefully
+- **[Laravel Integration](DOCS.md#doc-cookbooks-laravel-integration)** - Validation rules, casts, Blade, and Livewire
 
 ## Change log
 
