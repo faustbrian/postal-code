@@ -1,15 +1,15 @@
 ## Table of Contents
 
-1. [Basic Usage](#doc-cookbooks-basic-usage) (`cookbooks/basic-usage.md`)
-2. [Custom Handlers](#doc-cookbooks-custom-handlers) (`cookbooks/custom-handlers.md`)
-3. [Exception Handling](#doc-cookbooks-exception-handling) (`cookbooks/exception-handling.md`)
-4. [Laravel Integration](#doc-cookbooks-laravel-integration) (`cookbooks/laravel-integration.md`)
-5. [Overview](#doc-docs-readme) (`docs/README.md`)
-6. [Basic Usage](#doc-docs-basic-usage) (`docs/basic-usage.md`)
-7. [Countries Without Postcodes](#doc-docs-countries-without-postcodes) (`docs/countries-without-postcodes.md`)
-8. [Custom Handlers](#doc-docs-custom-handlers) (`docs/custom-handlers.md`)
-9. [Exception Handling](#doc-docs-exception-handling) (`docs/exception-handling.md`)
-10. [Laravel Integration](#doc-docs-laravel-integration) (`docs/laravel-integration.md`)
+1. [Basic Usage](#doc-cookbooks-basic-usage)
+2. [Custom Handlers](#doc-cookbooks-custom-handlers)
+3. [Exception Handling](#doc-cookbooks-exception-handling)
+4. [Laravel Integration](#doc-cookbooks-laravel-integration)
+5. [Overview](#doc-docs-readme)
+6. [Basic Usage](#doc-docs-basic-usage)
+7. [Countries Without Postcodes](#doc-docs-countries-without-postcodes)
+8. [Custom Handlers](#doc-docs-custom-handlers)
+9. [Exception Handling](#doc-docs-exception-handling)
+10. [Laravel Integration](#doc-docs-laravel-integration)
 <a id="doc-cookbooks-basic-usage"></a>
 
 # Basic Usage Cookbook
